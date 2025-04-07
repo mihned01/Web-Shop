@@ -1,26 +1,40 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue'
+import FooterComponent from './components/FooterComponent.vue'
+import ReviewsComponent from './components/ReviewsComponent.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <header class="justify-between">
+    <div class="flex flex-row items-center p-4">
+      <img alt="Vue logo" class="logo h-36 w-28" src="@/assets/Logo.png"/>
+      <span class="logoText text-8xl text-[#896780]">Bon Voyage</span>
+    </div>
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
+      
+      <NavBar/>
+      
+      <!-- Hero
+      Products
+      Reviews
+      Footer -->
+      <!-- <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-      </nav>
+      </nav> -->
     </div>
   </header>
 
-  <RouterView />
+  <RouterView/>
+  <FooterComponent/>
 </template>
 
-<style scoped>
+<style>
+.logoText {
+  font-family: 'Creepster', cursive;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -39,7 +53,7 @@ nav {
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: #896780;
 }
 
 nav a.router-link-exact-active:hover {
@@ -49,7 +63,7 @@ nav a.router-link-exact-active:hover {
 nav a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  /* border-left: 1px solid var(--color-border); */
 }
 
 nav a:first-of-type {

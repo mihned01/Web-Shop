@@ -1,9 +1,18 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import HeroComponent from '@/components/HeroComponent.vue'
+import ProductsComponent from '@/components/ProductsComponent.vue'
+import ReviewsComponent from '@/components/ReviewsComponent.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <HeroComponent/>
+    <div class="!mx-8">    
+    <ProductsComponent/>
+    <ReviewsComponent/>
+  </div>
+
+
+
   </main>
 </template>
