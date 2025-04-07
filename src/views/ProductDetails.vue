@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { useProducts } from "../modules/useProducts.js";
+import { useProducts } from "../modules/useProducts";
 import { useRoute } from "vue-router";
 
 const { coffinProducts } = useProducts();

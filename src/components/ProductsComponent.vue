@@ -21,6 +21,9 @@
                 <div class="w-3/5  flex flex-col items-end">
                    <img class="size-64":src="coffinProduct.productImage" alt="coffin image">
                    <button class="text-xl text-stone-200 bg-stone-900 rounded-full py-4 px-8 !mt-2"> Add to cart</button>
+                    <!-- <div class="text-xl text-stone-200 bg-stone-900 rounded-full py-4 px-8 !mt-2">
+                        <a href="src/assets/IMG_3675.JPEG" download="IMG_3675.JPEG" class="download-button">download</a>
+                    </div> -->
                 </div> 
     
     
