@@ -1,25 +1,22 @@
+
 <script setup>
 import { RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue'
-import FooterComponent from './components/FooterComponent.vue'
-import ReviewsComponent from './components/ReviewsComponent.vue';
+import NavBar from '@/components/NavBar.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 </script>
 
 <template>
-  <header class="justify-between">
-    <div class="flex flex-row items-center p-4">
-      <img alt="Vue logo" class="logo h-36 w-28" src="@/assets/Logo.png"/>
-      <span class="logoText text-8xl text-[#896780]">Bon Voyage</span>
+  <header  class="flex justify-between"  >
+    <div class="flex items-center p-4">
+      <img alt="Vue logo" class="logo h-36 w-28" src="@/assets/logo.svg" width="125" height="125" />
+      <span class="logoText text-[#896780] text-8xl">Bone Voyage</span>
     </div>
+
 
     <div class="wrapper">
       
-      <NavBar/>
-      
-      <!-- Hero
-      Products
-      Reviews
-      Footer -->
+      <NavBar />
+
       <!-- <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -27,14 +24,16 @@ import ReviewsComponent from './components/ReviewsComponent.vue';
     </div>
   </header>
 
-  <RouterView/>
+  <RouterView />
   <FooterComponent/>
 </template>
 
-<style>
-.logoText {
-  font-family: 'Creepster', cursive;
+<style> /*we removed scoped so it works for the new NavBar component*/
+.logoText{
+  font-family: "Creepster", cursive;
 }
+
+
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -63,7 +62,6 @@ nav a.router-link-exact-active:hover {
 nav a {
   display: inline-block;
   padding: 0 1rem;
-  /* border-left: 1px solid var(--color-border); */
 }
 
 nav a:first-of-type {

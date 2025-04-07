@@ -1,10 +1,9 @@
-<template>
-    <h4 class="text-6xl font-semibold text-gray-100">Customer reviews from beyond the grieve</h4>
 
+<template>
+    <h4 class="text-6xl font-semibold text-gray-100 py-25">Customer Reviews beyond the grave</h4>
     <div class="flex flex-wrap gap-8 mx-auto ownGrid-parent">
-    <div v-for="(review, index) in reviews" :key="index" class="border-b border-gray-300 p-4 inset-shadow-[#f3dc15] shadow-md shadow-[#f3dc15] bg-gray-100 rounded-lg ownGrid-child">
-        <span class="text-black">"</span>
-    <h3 class="text-xl font-semibold text-[#896780]">{{ review.reviewAuthor }}</h3>
+    <div v-for="(review, index) in reviews" :key="index" class="border-b border-gray-300 p-4 bg-gray-100 rounded-lg ownGrid inset-shadow-sm inset-shadow-[#896780] shadow-md shadow-[#f3dc15]">
+    <h3 class="text-2xl font-semibold text-[#896780]">"{{ review.reviewAuthor }}</h3>
     <div class="flex items-center my-2">
     <!-- Render stars based on reviewRating -->
     <template v-for="star in 5" :key="star">
@@ -48,17 +47,13 @@
     </script>
     
     <style scoped>
-    h4 {
-    font-family: 'Creepster', cursive;
+    .ownGrid-parent {
+        display:grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .ownGrid{
+        grid-column: span 4;
     }
 
-   .ownGrid-parent {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    }
-
-    .ownGrid-child {
-    grid-column: span 4;
-    }
-
+        /* Add any additional styles here if needed */
     </style>
